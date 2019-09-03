@@ -133,7 +133,7 @@ gc.collect()
 
 EPOCHS = 170
 opt = Adam(0.0002)
-model.compile(loss="binary_crossentropy", optimizer=opt, metrics=[accuracy_class])
+model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=[accuracy_class])
 model.fit_generator(generator=DataGen(valid_ids_dict, NUM_CLASSES, start=10, batch_size=64,steps=EPOCHS),
                     epochs=EPOCHS,
                     validation_data = [valid_x, valid_y],
@@ -143,7 +143,7 @@ model.fit_generator(generator=DataGen(valid_ids_dict, NUM_CLASSES, start=10, bat
 
 EPOCHS = 160
 opt = Adam(0.0001)
-model.compile(loss="binary_crossentropy", optimizer=opt, metrics=[accuracy_class])
+model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=[accuracy_class])
 model.fit_generator(generator=DataGen(valid_ids_dict, NUM_CLASSES, start=180, batch_size=48,steps=EPOCHS),
                     epochs=EPOCHS,
                     validation_data = [valid_x, valid_y],
@@ -153,7 +153,7 @@ model.fit_generator(generator=DataGen(valid_ids_dict, NUM_CLASSES, start=180, ba
 
 EPOCHS = 50
 opt = Adam(0.00004)
-model.compile(loss="binary_crossentropy", optimizer=opt, metrics=[accuracy_class])
+model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=[accuracy_class])
 model.fit_generator(generator=DataGen(valid_ids_dict, NUM_CLASSES, start=340, batch_size=48,steps=EPOCHS),
                     epochs=EPOCHS,
                     validation_data = [valid_x, valid_y],
@@ -163,7 +163,7 @@ model.fit_generator(generator=DataGen(valid_ids_dict, NUM_CLASSES, start=340, ba
 
 EPOCHS = 110
 opt = Adam(0.00002)
-model.compile(loss="binary_crossentropy", optimizer=opt, metrics=[accuracy_class])
+model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=[accuracy_class])
 model.fit_generator(generator=DataGen(valid_ids_dict, NUM_CLASSES, start=390, batch_size=48,steps=EPOCHS),
                     epochs=EPOCHS,
                     validation_data = [valid_x, valid_y],
